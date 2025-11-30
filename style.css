@@ -1,0 +1,127 @@
+
+/* External stylesheet for the portfolio */
+:root{
+  --bg:#0f1724;
+  --card:#111827;
+  --accent:#2563eb;
+  --muted:#94a3b8;
+  --light:#e6eef8;
+}
+
+*{box-sizing:border-box}
+body{font-family:Arial, Helvetica, sans-serif; margin:0; background: linear-gradient(180deg,#071023 0%, #0f1724 100%); color:var(--light); line-height:1.5;}
+.container{max-width:1000px; margin:40px auto; padding:20px;}
+header.site-header{position:sticky;display:flex; align-items:center; justify-content:space-between; margin-bottom:24px;top:0px; background: linear-gradient(180deg,#071023 0%, #0f1724 100%)}
+.logo{display:flex; align-items:center; gap:14px;}
+.logo img{width:72px; height:72px; object-fit:cover; border-radius:8px; border:2px solid rgba(255,255,255,0.06);}
+nav a{color:var(--light); margin-left:14px; text-decoration:none; font-weight:600;}
+.hero{display:flex; gap:24px; align-items:center; background:rgba(255,255,255,0.03); padding:20px; border-radius:10px;}
+.hero .intro{flex:1}
+h1.name{margin:0; font-size:30px; color:var(--accent);}
+p.lead{margin:8px 0 0; color:var(--muted)}
+a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+
+
+footer{margin-top:28px; text-align:center; color:var(--muted); font-size:14px;}
+
+/* About */
+.profile{display:flex; gap:20px; align-items:center; margin-top:18px}
+.profile img{width:160px; height:160px; object-fit:cover; border-radius:8px; border:3px solid rgba(255,255,255,0.04)}
+div.card:hover{box-shadow:0 0 12px var(--accent); transform:translateY(-2px); transition:.25s}
+
+/* Cards */
+.section{margin-top:28px}
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px;}
+.card{background:rgba(255,255,255,0.03); padding:18px; border-radius:12px; box-shadow: 0 6px 18px rgba(0,0,0,0.4);}
+.card h3{margin:0 0 8px 0; color:var(--light)}
+
+/* Projects list */
+.project-screenshot{max-width:100%; border-radius:8px; display:block; margin-top:10px;}
+article.card:hover{box-shadow:0 0 12px var(--accent); transform:translateY(-2px); transition:.25s}
+
+/* Skills bar */
+.skill{background:rgba(255,255,255,0.03); padding:10px; border-radius:8px;}
+.progress{background:rgba(255,255,255,0.06); height:10px; border-radius:8px; margin-top:8px;}
+.progress > i{display:block; height:100%; background:var(--accent); border-radius:8px;}
+
+/*contact*/
+/* ===== CONTACT PAGE MINIMAL STYLES (BLUE GLOW) ===== */
+
+.contact-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: var(--light);
+}
+
+.contact-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* Contact Item (Hoverable Row) */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+    gap: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.25s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--light);
+}
+
+.contact-item:hover {
+    background: rgba(37, 99, 235, 0.12);  /* subtle blue background */
+    transform: translateX(6px);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.55); /* strong blue glow */
+}
+
+/* Icons */
+.contact-item img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(1.8);
+    transition: 0.25s ease;
+}
+
+.contact-item:hover img {
+    filter: brightness(2.5);
+    transform: scale(1.15);
+}
+
+/* Text */
+.contact-item span {
+    font-size: 18px;
+    transition: 0.2s ease;
+}
+
+.contact-item:hover span {
+    color: var(--accent); /* bright blue on hover */
+}
+
+/* Contact footer */
+.contact-footer {
+    text-align: center;
+    color: var(--muted);
+    margin-top: 40px;
+}
+.contacts{
+  text-align: center;
+}
+
+/* simple responsive */
+@media(max-width:700px){ .hero{flex-direction:column; align-items:flex-start} .profile{flex-direction:column} .logo img{width:56px;height:56px} nav{margin-top:10px} }
